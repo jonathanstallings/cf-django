@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class User(models.Model):
     first_name = models.CharField(max_length=60)
@@ -15,7 +13,7 @@ class User(models.Model):
         return name[:25] + "..." if len(name) > 28 else name
 
     @property
-    def bio_abbrev(self):
+    def notes_abbrev(self):
         if self.notes:
             return self.notes[:30] + "..." if len(self.notes) > 33 else self.notes
         else:

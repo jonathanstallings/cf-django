@@ -1,0 +1,297 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after, .nav:before, .nav:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-color: rgb(50, 50, 50);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 350px;
+}
+
+a {
+  text-decoration: none;
+  color: lightslategray;
+}
+
+a:hover {
+  color: white;
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
+}
+
+button {
+  color: rgb(30,30,30);
+  background-color: #9d9d9d;
+  border-radius: 5px;
+  border: none;
+  height: 32px;
+  padding: 4px 16px;
+  margin: 10px 0;
+  text-shadow: rgb(100,100,100) 0 1px 0;
+}
+
+button:hover {
+  color: black;
+  background-color: rgb(120,120,120);
+}
+
+button:active {
+  color: lightslategray;
+  background-color: rgb(120,120,120);
+}
+
+header {
+  background-color: rgb(30, 30, 30);
+}
+
+h1, h2 {
+  margin: 0;
+/*  font-family: 'Bangers', cursive;*/
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
+}
+
+h1 {
+/*  font-size: 3rem;*/
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  width: auto;
+}
+
+footer {
+  padding: 15px 15px;
+  margin: auto;
+  height: 20%;
+  width: 100%;
+  background-color: rgb(30, 30, 30);
+}
+
+footer p {
+  margin-left: 20px;
+  font-size: .9rem;
+  color: #9d9d9d;
+  line-height: 1.2rem;
+}
+
+footer a {
+  color: lightslategray;
+}
+
+img {
+
+}
+
+main {
+  min-height: 800px;
+  position: relative;
+  padding: 50px;
+}
+
+main p {
+  font-size: .9rem;
+  color: #9d9d9d;
+  line-height: 1.2rem;
+}
+
+fieldset {
+  margin: 20px;
+  background-color: rgb(50,50,50);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/*************************
+Navigation
+**************************/
+
+.navbar {
+  min-height: 50px;
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #9d9d9d;
+}
+
+.collapse {
+  display: none;
+  visibility: hidden;
+}
+
+.nav {
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar-nav {
+  margin: 0;
+  float: left;
+}
+
+.nav>li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.nav>li:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.nav>li>a {
+  display: block;
+  line-height: 20px;
+  padding: 15px;
+  color: #9d9d9d;
+}
+
+.nav>li>a.current {
+  color: white;
+  font-weight: bold;
+}
+
+.nav>li>a:hover {
+  color: white;
+}
+
+.logo {
+  float: left;
+  margin: 0;
+  padding: 15px;
+/*  font-family: 'Bangers', cursive;*/
+  font-size: 1.2rem;
+  color: white;
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
+}
+
+/*************************
+Text Content
+**************************/
+
+.textContent {
+  min-height: 50%;
+  padding: 50px 0;
+}
+
+.textContent article {
+  height: 100%;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgb(30,30,30);
+  border: 1px solid rgb(30,30,30);
+  border-radius: 10px;
+}
+
+.textContent article h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*************************
+Visualization Display
+**************************/
+
+.showTransitions {
+  transition: all 0.6s ease-in-out;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+/*************************
+Media Queries
+**************************/
+
+@media (min-width: 481px) {
+
+  .navbar-header {
+    float: left;
+  }
+
+  .navbar-collapse.collapse {
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+    visibility: visible!important;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .navbar-toggle {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .navbar-collapse {
+    padding: 0 15px;
+  }
+
+  .navbar-nav {
+    float: none;
+    margin: 7.5px -15px;
+  }
+
+  .nav>li {
+    float: none;
+    position: relative;
+    display: block;
+  }
+
+}
