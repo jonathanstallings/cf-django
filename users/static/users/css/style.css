@@ -167,7 +167,7 @@ Navigation
 
 .navbar-nav {
   margin: 0;
-  float: left;
+  float: right;
 }
 
 .nav>li {
@@ -240,21 +240,29 @@ li > .delete:hover {
 
 
 /*************************
-Visualization Display
+Text Content
 **************************/
 
-.showTransitions {
-  transition: all 0.6s ease-in-out;
+.textContent {
+  min-height: 50%;
+  padding: 50px 0;
 }
 
-.faded {
-  opacity: 0.3;
+.textContent article {
+  height: 100%;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  background-color: rgb(30,30,30);
+  border: 1px solid rgb(30,30,30);
+  border-radius: 10px;
 }
 
-.hidden {
-  visibility: hidden;
+.textContent article h1 {
+  text-align: center;
+  padding-bottom: 20px;
 }
-
 
 /*************************
 Media Queries

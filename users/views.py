@@ -30,7 +30,11 @@ def AddView(request):
     return render(request, 'users/detail.html', context)
 
 
-def EditView(request, user_id):
+def about(request):
+    return render(request, 'users/about.html', context=None,)
+
+
+def edit(request, user_id):
     if user_id != '0':
         u = get_object_or_404(User, pk=user_id)
     else:
@@ -45,7 +49,7 @@ def EditView(request, user_id):
     return HttpResponseRedirect(reverse('users:index'))
 
 
-def DeleteView(request, user_id):
+def delete(request, user_id):
     u = get_object_or_404(User, pk=user_id)
     u.delete()
     return HttpResponseRedirect(reverse('users:index'))
