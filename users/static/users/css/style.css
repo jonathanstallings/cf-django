@@ -12,8 +12,8 @@
 
 body {
   background-color: rgb(50, 50, 50);
-  font-family: 'Abel', sans-serif;
-  color: white;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(200, 200, 200);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -65,16 +65,16 @@ header {
   background-color: rgb(30, 30, 30);
 }
 
-h1, h2 {
+h1 {
   margin: 0;
-/*  font-family: 'Bangers', cursive;*/
+  font-family: 'Bangers', cursive;
   text-shadow:
     1px 1px 1px #000,
     5px 5px 8px rgb(30,30,30);
 }
 
 h1 {
-/*  font-size: 3rem;*/
+  font-size: 3rem;
 }
 
 h3 {
@@ -194,9 +194,9 @@ Navigation
   float: left;
   margin: 0;
   padding: 15px;
-/*  font-family: 'Bangers', cursive;*/
+  font-family: 'Bangers', cursive;
   font-size: 1.2rem;
-  color: white;
+  color: rgb(200, 200, 200);
   text-shadow:
     1px 1px 1px #000,
     5px 5px 8px rgb(30,30,30);
