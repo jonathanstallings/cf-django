@@ -35,16 +35,17 @@ def about(request):
 
 def edit(request, user_id):
     if user_id != '0':
-        u = get_object_or_404(User, pk=user_id)
+        user = get_object_or_404(User, pk=user_id)
     else:
-        u = User()
+        user = User()
 
-    u.first_name = request.POST['first_name']
-    u.last_name = request.POST['last_name']
-    u.email = request.POST['email']
-    u.notes = request.POST['notes']
+    user.first_name = request.POST['first_name']
+    user.last_name = request.POST['last_name']
+    user.email = request.POST['email']
+    user.notes = request.POST['notes']
 
-    u.save()
+    if not user.protected:  # Prevent modificaton of special users.
+        user.save()
     return HttpResponseRedirect(reverse('index'))
 
 
