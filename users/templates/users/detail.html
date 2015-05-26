@@ -2,7 +2,7 @@
 {% block content %}
 <section id="user-detail">
     <h3>User Detail</h3>
-    <form action="{% url 'users:edit' user.id %}" method="post">
+    <form action="{% url 'edit' user.id %}" method="post">
     {% csrf_token %}
     <ul>
         <li>

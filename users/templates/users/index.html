@@ -4,7 +4,7 @@
     <h3>Add Users</h3>
     <ul>
         <li>
-            <a href="{% url 'users:add' %}" class="user-link">New User</a>
+            <a href="{% url 'add' %}" class="user-link">New User</a>
         </li>
     </ul>
 </section>
@@ -14,8 +14,8 @@
     {% if user_list %}
         {% for user in user_list %}
         <li>
-            <a href="{% url 'users:detail' user.id %}" class="user-link">{{ user.name_abbrev }}</a>
-            <a href="{% url 'users:delete' user.id %}" class="delete">Delete</a>
+            <a href="{% url 'detail' user.id %}" class="user-link">{{ user.name_abbrev }}</a>
+            <a href="{% url 'delete' user.id %}" class="delete">Delete</a>
         </li>
         {% endfor %}
     {% else %}

@@ -19,6 +19,6 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(url='users')),
-    url(r'^users/', include('users.urls', namespace="users")),
+    url(r'^users/', include('users.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -45,10 +45,10 @@ def edit(request, user_id):
     u.notes = request.POST['notes']
 
     u.save()
-    return HttpResponseRedirect(reverse('users:index'))
+    return HttpResponseRedirect(reverse('index'))
 
 
 def delete(request, user_id):
     u = get_object_or_404(User, pk=user_id)
     u.delete()
-    return HttpResponseRedirect(reverse('users:index'))
+    return HttpResponseRedirect(reverse('index'))
