@@ -203,19 +203,17 @@ Navigation
 }
 
 /*************************
-Current Users
+Users
 **************************/
 
-#add-users li,
-#current-users li {
+main li {
   overflow: hidden;
   padding: 5px 0;
   border-bottom: 1px solid rgb(120, 120, 120);
   background-color: rgb(40, 40, 40);
 }
 
-#add-users li:hover,
-#current-users li:hover {
+main li:hover {
   background-color: rgb(60, 60, 60);
 }
 
@@ -240,6 +238,41 @@ li > .delete:hover {
   text-shadow: 1px 1px 1px black, 5px 5px 8px rgb(30, 30, 30);
 }
 
+/*************************
+User Detail
+**************************/
+
+user-detail li > * {
+  float: left;
+  position: relative;
+}
+
+#user-detail input[type="text"],
+#user-detail input[type="email"],
+#notes {
+  border: 1px solid #ddd;
+  background: rgb(120, 120, 120);
+  border-radius: 6px;
+  color: black;
+  width: 50%;
+}
+
+#user-detail input[type="text"],
+#user-detail input[type="email"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 40px;
+  height: 22px;
+/*  padding: 10px;*/
+}
+
+#user-detail label {
+  display: inline-block;
+  width: 100px;
+  font-style: 18px;
+  line-height: 40px;
+  text-align: right;
+}
 
 /*************************
 Text Content

@@ -2,9 +2,11 @@
 {% block content %}
 <section id="add-users">
     <h3>Add Users</h3>
-    <li>
-        <a href="{% url 'users:add' %}" class="user-link">New User</a>
-    </li>
+    <ul>
+        <li>
+            <a href="{% url 'users:add' %}" class="user-link">New User</a>
+        </li>
+    </ul>
 </section>
 <section id="current-users">
     <h3>Current Users</h3>
