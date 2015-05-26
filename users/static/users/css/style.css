@@ -296,9 +296,9 @@ User Detail
   border: 0px;
   color: lightslategray;
   font-size: 18px;
-  width: 60px;
+  width: 80px;
   cursor: pointer;
-  padding: 8px 6px;
+  padding: 8px 10px;
 }
 
 #form-buttons .button:hover {

@@ -1,4 +1,9 @@
-var FRODO_ID = 16;
+/*************************
+Special User Behavior
+**************************/
+
+var FRODO_ID = 22;
+var GANDALF_ID =23;
 
 $users_ul = $("#current-users ul");
 

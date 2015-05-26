@@ -7,25 +7,25 @@
     <ul>
         <li>
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}" size="30" maxlength="60" required />
+            <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}" size="30" maxlength="60" required {% if user.protected %} disabled="disabled" {% endif %} />
         </li>
         <li>
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name"value="{{ user.last_name }}" size="30" maxlength="60" required />
+            <input type="text" name="last_name" id="last_name"value="{{ user.last_name }}" size="30" maxlength="60" required {% if user.protected %} disabled="disabled" {% endif %} />
         </li>
         <li>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="{{ user.email }}" size="30" maxlength="254" required />
+            <input type="email" name="email" id="email" value="{{ user.email }}" size="30" maxlength="254" required {% if user.protected %} disabled="disabled" {% endif %} />
         </li>
         <li>
             <div>
                 <label for="notes">Notes</label>
-                <textarea name="notes" id="notes" cols="60" rows="8">{{ user.notes }}</textarea>
+                <textarea name="notes" id="notes" cols="60" rows="8" {% if user.protected %} disabled="disabled" {% endif %}>{{ user.notes }}</textarea>
             </div>
         </li>
         <li>
             <div id="form-buttons">
-                <input type="submit" id="save-button" class="button" value="Save">
+                <input type="submit" id="save-button"  {% if user.protected %} class="button faded" value="Locked" disabled="disabled" {% else %} class="button" value="Save" {% endif %} />
                 <a class="button" href="/">Cancel</a>
             </div>
         </li>

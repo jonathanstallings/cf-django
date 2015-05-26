@@ -6,6 +6,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=60)
     email = models.EmailField(max_length=254)
     notes = models.TextField(default="")
+    protected = models.BooleanField(default=0)
 
     @property
     def name_abbrev(self):
