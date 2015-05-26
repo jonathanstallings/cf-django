@@ -20,8 +20,12 @@
         <li>
             <label for="notes">Notes</label>
             <textarea name="notes" id="notes" cols="40" rows="8">{{ user.notes }}</textarea>
-            <input type="submit" value="Save">
-            <a class="button" href="/">Cancel</a>
+        </li>
+        <li>
+            <div id="form-buttons">
+                <input type="submit" id="save-button" value="Save">
+                <a class="button" href="/">Cancel</a>
+            </div>
         </li>
     </ul>
     </form>

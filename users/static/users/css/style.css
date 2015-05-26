@@ -32,7 +32,8 @@ a {
   color: lightslategray;
 }
 
-a:hover {
+a:hover,
+#save-button:hover {
   color: white;
   text-shadow:
     1px 1px 1px #000,
@@ -40,25 +41,13 @@ a:hover {
 }
 
 button {
-  color: rgb(30,30,30);
-  background-color: #9d9d9d;
-  border-radius: 5px;
-  border: none;
-  height: 32px;
-  padding: 4px 16px;
-  margin: 10px 0;
-  outline: none;
-  text-shadow: rgb(100,100,100) 0 1px 0;
-}
-
-button:hover {
-  color: black;
-  background-color: rgb(120,120,120);
-}
-
-button:active {
-  color: lightslategray;
-  background-color: rgb(120,120,120);
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  cursor: pointer;
+  float: right;
+  position: relative;
 }
 
 header {
@@ -127,6 +116,23 @@ footer a {
 /*************************
 Navigation
 **************************/
+
+header button {
+  color: rgb(30,30,30);
+  background-color: #9d9d9d;
+  border-radius: 5px;
+  border: none;
+  height: 32px;
+  padding: 4px 16px;
+  margin: 10px 0;
+  outline: none;
+  text-shadow: rgb(100,100,100) 0 1px 0;
+}
+
+header button:hover {
+  color: black;
+  background-color: rgb(40 ,40 ,40 );
+}
 
 .navbar {
   min-height: 50px;
@@ -242,6 +248,10 @@ li > .delete:hover {
 User Detail
 **************************/
 
+#user-detail {
+  max-width: 800px;
+}
+
 user-detail li > * {
   float: left;
   position: relative;
@@ -253,25 +263,39 @@ user-detail li > * {
   border: 1px solid #ddd;
   background: rgb(120, 120, 120);
   border-radius: 6px;
+  font-size: 18px;
+  padding: 0 10px;
   color: black;
-  width: 50%;
+  width: 60%;
 }
 
 #user-detail input[type="text"],
 #user-detail input[type="email"] {
   margin: 0;
-  font-size: 18px;
   line-height: 40px;
-  height: 22px;
-/*  padding: 10px;*/
 }
 
 #user-detail label {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   font-style: 18px;
   line-height: 40px;
   text-align: right;
+  padding-right: 20px;
+}
+
+#save-button {
+  background: none;
+  border: 0px;
+  color: lightslategray;
+  font-size: 16px;
+  width: 60px;
+  cursor: pointer;
+  padding: 8px 6px;
+}
+
+#form-buttons {
+  margin: 0 0 0 120px;
 }
 
 /*************************
