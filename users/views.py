@@ -28,3 +28,18 @@ def AddView(request):
     }
 
     return render(request, 'users/detail.html', context)
+
+
+def EditView(request, user_id):
+    if user_id != '0':
+        u = get_object_or_404(User, pk=user_id)
+    else:
+        u = User()
+
+    u.first_name = request.POST['first_name']
+    u.last_name = request.POST['last_name']
+    u.email = request.POST['email']
+    u.notes = request.POST['notes']
+
+    u.save()
+    return HttpResponseRedirect(reverse('users:index'))

@@ -1,20 +1,20 @@
 {% extends "users/base.html" %}
 {% block content %}
 <h3>Some Text</h3>
-<form action="{% url 'edit' user.id %}" method="post">
+<form action="{% url 'users:edit' user.id %}" method="post">
 {% csrf_token %}
     <fieldset>
         <legend>
             Edit placeholder
         </legend>
         <label for="first-name">First Name</label>
-        <input type="text" name="first-name" value="{{ user.first_name }}" size="30" maxlength="60" required />
+        <input type="text" name="first_name" value="{{ user.first_name }}" size="30" maxlength="60" required />
         <label for="last-name">Last Name</label>
-        <input type="text" name="last-name" value="{{ user.last_name }}" size="30" maxlength="60" required />
-        <label for="email">First Name</label>
+        <input type="text" name="last_name" value="{{ user.last_name }}" size="30" maxlength="60" required />
+        <label for="email">Email</label>
         <input type="email" name="email" value="{{ user.email }}" size="30" maxlength="254" required />
         <label for="notes">Notes</label>
-        <textarea name="notes" id="notes" cols="40" rows="8"></textarea>
+        <textarea name="notes" id="notes" cols="40" rows="8">{{ user.notes }}</textarea>
         <input type="submit" value="Save">
         <a class="button" href="/">Cancel</a>
     </fieldset>
