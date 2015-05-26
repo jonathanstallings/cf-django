@@ -57,7 +57,7 @@ function whiteRider (user_id) {
     //User list item is styled as Gandalf the White.
     var $thisID = selectByID(user_id).addClass('showTransitions');
     
-    $thisID.addClass('whiteRider');
+    $thisID.addClass('whiteRider').removeClass('hover');
     $thisID.find('a.user-link').text("Gandalf the White");
 }
 

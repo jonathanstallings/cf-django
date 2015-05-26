@@ -220,7 +220,7 @@ main li {
   background-color: rgb(40, 40, 40);
 }
 
-main li:hover {
+li.hover:hover {
   background-color: rgb(60, 60, 60);
 }
 
@@ -349,18 +349,16 @@ Special :)
   opacity: 0.3;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
-ul li.whiteRider {
+.whiteRider {
   background-color: rgb(200, 200, 200);
 }
 
-ul li.whiteRider:hover {
-  background-color: rgb((220, 220, 220);
+.whiteRider a.user-link {
+  color: white;
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
 }
-
 
 /*************************
 Media Queries

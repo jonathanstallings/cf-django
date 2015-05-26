@@ -13,7 +13,7 @@
     <ul>
     {% if user_list %}
         {% for user in user_list %}
-        <li  data-id="{{ user.id }}">
+        <li  data-id="{{ user.id }}" {% if user.id == 23 %} id="gandalf" {% endif %} class="hover">
             <a href="{% url 'detail' user.id %}" class="user-link">{{ user.name_abbrev }}</a>
             <a href="{% url 'delete' user.id %}" class="delete">Delete</a>
         </li>
