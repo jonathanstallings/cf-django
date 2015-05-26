@@ -23,8 +23,10 @@ body {
 
 main {
   min-height: 800px;
+  max-width: 800px;
   position: relative;
   padding: 50px;
+  margin: 0 auto;
 }
 
 a {
@@ -248,7 +250,8 @@ User Detail
 **************************/
 
 #user-detail {
-  max-width: 800px;
+/*  max-width: 800px;*/
+  margin: 0 auto;
 }
 
 #user-detail li * {
@@ -316,8 +319,6 @@ Text Content
 
 .textContent article {
   height: 100%;
-  width: 80%;
-  max-width: 1000px;
   margin: auto;
   padding: 30px;
   background-color: rgb(30,30,30);
