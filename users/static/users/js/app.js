@@ -1,3 +1,5 @@
+var FRODO_ID = 16;
+
 $users_ul = $("#current-users ul");
 
 function selectByID (user_id) {
@@ -38,13 +40,24 @@ function getDelButtonByID (user_id) {
 function changeDelButtonText (user_id, text) {
     //Changes the text of the delete anchor 'button' in user list item.
     getDelButtonByID(user_id).text(text);
-    
 }
 
 function frodoVanish (user_id) {
     //Frodo puts on the rind and . . .
     fadeByID(user_id);
     changeDelButtonText(user_id, "Oh no! Mr. Frodo!");
+}
+
+function whiteRider (user_id) {
+    //User list item is styled as Gandalf the White.
+    var $thisID = selectByID(user_id).addClass('showTransitions');
+    
+    return selectByID(user_id).addClass('whiteRider');
+}
+
+function greyPilgrim (user_id) {
+    //Remove list item styling from Gandalf the White.
+    return selectByID(user_id).removeClass('whiteRider');
 }
 
 /*************************
@@ -56,11 +69,10 @@ $("#navbar-toggle").on("click", function (e) {
   $("nav.navbar-collapse").toggleClass("collapse");
 });
 
-var frodoID = 16;
-getDelButtonByID(frodoID).on("click", function (e) {
-    $delButton = getDelButtonByID(frodoID);
+getDelButtonByID(FRODO_ID).on("click", function (e) {
+    $delButton = getDelButtonByID(FRODO_ID);
     e.preventDefault();
-    frodoVanish(frodoID);
+    frodoVanish(FRODO_ID);
     $delButton.off("click");
-    setTimeout(changeDelButtonText, 2000, frodoID, "Come Back!");
+    setTimeout(changeDelButtonText, 2000, FRODO_ID, "Come Back!");
 });

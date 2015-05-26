@@ -353,8 +353,12 @@ Special :)
   visibility: hidden;
 }
 
-.theWhite {
-  
+ul li.whiteRider {
+  background-color: rgb(200, 200, 200);
+}
+
+ul li.whiteRider:hover {
+  background-color: rgb((220, 220, 220);
 }
 
 
