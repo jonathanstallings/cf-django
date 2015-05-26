@@ -1,6 +1,6 @@
 {% extends "users/base.html" %}
 {% block content %}
-<button id="add-user-button">Add User</button>
+<a href="{% url 'users:add' %}" class="button">Add User</a>
 <section id="current-users">
     <h3>Current Users</h3>
     <ul>
