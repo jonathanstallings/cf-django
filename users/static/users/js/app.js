@@ -57,7 +57,8 @@ function whiteRider (user_id) {
     //User list item is styled as Gandalf the White.
     var $thisID = selectByID(user_id).addClass('showTransitions');
     
-    return selectByID(user_id).addClass('whiteRider');
+    $thisID.addClass('whiteRider');
+    $thisID.find('a.user-link').text("Gandalf the White");
 }
 
 function greyPilgrim (user_id) {
@@ -75,9 +76,19 @@ $("#navbar-toggle").on("click", function (e) {
 });
 
 getDelButtonByID(FRODO_ID).on("click", function (e) {
-    $delButton = getDelButtonByID(FRODO_ID);
+    var $delButton = getDelButtonByID(FRODO_ID);
+    
     e.preventDefault();
     frodoVanish(FRODO_ID);
     $delButton.off("click");
     setTimeout(changeDelButtonText, 2000, FRODO_ID, "Come Back!");
+});
+
+getDelButtonByID(GANDALF_ID).on("click", function (e) {
+    var $delButton = getDelButtonByID(GANDALF_ID);
+    
+    e.preventDefault();
+    whiteRider(GANDALF_ID);
+    $delButton.off("click");
+    setTimeout(changeDelButtonText, 2000, GANDALF_ID, "Return?");
 });
