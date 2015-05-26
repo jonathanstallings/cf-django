@@ -1,0 +1,159 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-color: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
+}
+
+main {
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  overflow: hidden;
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(120, 120, 120);
+  background-color: rgb(40, 40, 40);
+}
+
+li * {
+  float: left;
+}
+
+li, h3 {
+  clear: both;
+  list-style: none;
+}
+
+input, button {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  cursor: pointer;
+  padding: 8px 6px;
+  float: right;
+  position: relative;
+  right: 1px;
+}
+
+button:hover {
+  color: white;
+  text-shadow: 1px 1px 1px black, 5px 5px 8px rgb(30, 30, 30);
+}
+
+h3,
+label[for='new-task'] {
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid rgb(200, 200, 200);
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black, 5px 5px 8px rgb(30, 30, 30);
+}
+
+label[for='new-task'] {
+  display: block;
+}
+
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 22px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: rgb(120, 120, 120);
+  border-radius: 6px;
+  color: rgb(51, 51, 51);
+}
+
+input[type='text']:focus {
+  color: black;
+}
+
+input#new-task {
+  float: left;
+  width: 80%;
+}
+
+li > input[type='checkbox'] {
+  margin: 0 10px;
+  position: relative;
+  top: 12px;
+  cursor: pointer;
+}
+
+li > div {
+  font-size: 18px;
+  line-height: 40px;
+  width: 75%;
+  padding: 0 0 0 11px;
+  -webkit-user-select: text;
+}
+
+li > div:focus {
+  font-style: italic;
+}
+
+li > .delete:hover {
+  color: #CF2323;
+  text-shadow: 1px 1px 1px black, 5px 5px 8px rgb(30, 30, 30);
+}
+
+#add-tasks div.container {
+  padding: 20px 0 20px 20px;
+  background-color: rgb(40, 40, 40);
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+
+#incomplete-tasks li:hover,
+#completed-tasks li:hover {
+  background-color: rgb(60, 60, 60)
+}
+
+#completed-tasks div {
+  text-decoration: line-through;
+  color: #888
+}
+
+/*************************
+Media Queries
+**************************/
+
+@media (max-width: 550px) {
+  
+  body {
+    margin: 0;
+  }
+  
+  main {
+    min-width: 280px;
+    margin: 0 auto;
+    width: 90%;
+    margin: 10px;
+  }
+  
+  input#new-task {
+    width: 65%;
+  }
+  
+  li> div {
+    width: 50%;
+  }
+  
+}

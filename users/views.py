@@ -5,7 +5,7 @@ from django.views import generic
 
 from .models import User
 
-# Create your views here.
 
 def IndexView(request):
-    return HttpResponse("Hello World")
+    context = {'user_list': User.objects.order_by('first_name')}
+    return render(request, 'users/index.html', context)
