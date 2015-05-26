@@ -105,9 +105,9 @@ STATIC_URL = '/static/'
 # Added the following for Heroku configuration:
 
 # Parse database configuration from $DATABASE_URL
-if not os.environ.get("HOME") == '/home/jonathan':  # Added tutsplus wrapper
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+# if not os.environ.get("HOME") == '/home/jonathan':  # Added tutsplus wrapper
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
