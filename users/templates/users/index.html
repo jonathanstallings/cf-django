@@ -1,4 +1,13 @@
 {% extends "users/base.html" %}
 {% block content %}
-<p>I am new content</p>
+<button id="add-user-button">Add User</button>
+<section id="current-users">
+    <h3>Current Users</h3>
+    <ul>
+        <li>
+            <a href="#">Sample User</a>
+            <button class="delete">Delete</button>
+        </li>
+    </ul>
+</section>
 {% endblock %}
