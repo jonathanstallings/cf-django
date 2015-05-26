@@ -32,8 +32,7 @@ a {
   color: lightslategray;
 }
 
-a:hover,
-#save-button:hover {
+a:hover {
   color: white;
   text-shadow:
     1px 1px 1px #000,
@@ -252,7 +251,7 @@ User Detail
   max-width: 800px;
 }
 
-user-detail li > * {
+#user-detail li * {
   float: left;
   position: relative;
 }
@@ -284,18 +283,26 @@ user-detail li > * {
   padding-right: 20px;
 }
 
-#save-button {
+#form-buttons {
+  margin: 0 0 0 120px;
+}
+
+#form-buttons .button {
+  float: none;
   background: none;
   border: 0px;
   color: lightslategray;
-  font-size: 16px;
+  font-size: 18px;
   width: 60px;
   cursor: pointer;
   padding: 8px 6px;
 }
 
-#form-buttons {
-  margin: 0 0 0 120px;
+#form-buttons .button:hover {
+  color: white;
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
 }
 
 /*************************

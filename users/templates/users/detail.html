@@ -18,12 +18,14 @@
             <input type="email" name="email" id="email" value="{{ user.email }}" size="30" maxlength="254" required />
         </li>
         <li>
-            <label for="notes">Notes</label>
-            <textarea name="notes" id="notes" cols="40" rows="8">{{ user.notes }}</textarea>
+            <div>
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes" cols="60" rows="8">{{ user.notes }}</textarea>
+            </div>
         </li>
         <li>
             <div id="form-buttons">
-                <input type="submit" id="save-button" value="Save">
+                <input type="submit" id="save-button" class="button" value="Save">
                 <a class="button" href="/">Cancel</a>
             </div>
         </li>
