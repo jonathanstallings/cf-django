@@ -49,6 +49,8 @@ def edit(request, user_id):
 
 
 def delete(request, user_id):
-    u = get_object_or_404(User, pk=user_id)
-    u.delete()
+    protected_ids = ['1', '2', '16']
+    if user_id not in protected_ids:  # Prevent deletion of special users.
+        user = get_object_or_404(User, pk=user_id)
+        user.delete()
     return HttpResponseRedirect(reverse('index'))

@@ -338,6 +338,27 @@ Text Content
 }
 
 /*************************
+Special :)
+**************************/
+
+.showTransitions {
+  transition: all 1s ease-in-out;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.theWhite {
+  
+}
+
+
+/*************************
 Media Queries
 **************************/
 
