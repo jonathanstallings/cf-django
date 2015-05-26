@@ -12,7 +12,7 @@
 
 body {
   background-color: rgb(50, 50, 50);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
   color: white;
   padding: 0;
   margin: 0;
@@ -25,12 +25,6 @@ main {
   min-height: 800px;
   position: relative;
   padding: 50px;
-}
-
-main p {
-  font-size: .9rem;
-  color: #9d9d9d;
-  line-height: 1.2rem;
 }
 
 a {
@@ -212,6 +206,7 @@ Navigation
 Current Users
 **************************/
 
+#add-users li,
 #current-users li {
   overflow: hidden;
   padding: 5px 0;
@@ -219,16 +214,23 @@ Current Users
   background-color: rgb(40, 40, 40);
 }
 
-#current-users li, h3 {
-  clear: both;
+#add-users li:hover,
+#current-users li:hover {
+  background-color: rgb(60, 60, 60);
 }
 
-#current-users button {
+.user-link {
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 0 0 11px;
+}
+
+li > .delete {
   float: right;
   position: relative;
   right: 1px;
   width: 60px;
-  padding: 8px 6px;
+  padding: 10px 6px;
   font-size: 15px;
   cursor: pointer;
 }
@@ -264,6 +266,12 @@ Text Content
   padding-bottom: 20px;
 }
 
+.textContent p {
+  font-size: .9rem;
+  color: #9d9d9d;
+  line-height: 1.2rem;
+}
+
 /*************************
 Media Queries
 **************************/
@@ -285,7 +293,27 @@ Media Queries
 }
 
 @media (max-width: 480px) {
-
+  
+  main {
+    padding: 0;
+  }
+  
+  h3 {
+    padding: 30px 15px 10px;
+  }
+  
+  #add-users {
+    padding: 20px 0 0 0;
+  }
+  
+  .user-link {
+    padding: 0 0 0 21px;
+  }
+  
+  li > .delete {
+    padding-right: 12px;
+  }
+  
   .navbar-toggle {
     position: relative;
     display: block;

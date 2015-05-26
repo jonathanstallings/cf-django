@@ -1,14 +1,19 @@
 {% extends "users/base.html" %}
 {% block content %}
-<a href="{% url 'users:add' %}" class="button">Add User</a>
+<section id="add-users">
+    <h3>Add Users</h3>
+    <li>
+        <a href="{% url 'users:add' %}" class="user-link">New User</a>
+    </li>
+</section>
 <section id="current-users">
     <h3>Current Users</h3>
     <ul>
     {% if user_list %}
         {% for user in user_list %}
         <li>
-            <a href="{% url 'users:detail' user.id %}">{{ user.name_abbrev }}</a>
-            <a href="{% url 'users:delete' user.id %}" class="button">Delete</a>
+            <a href="{% url 'users:detail' user.id %}" class="user-link">{{ user.name_abbrev }}</a>
+            <a href="{% url 'users:delete' user.id %}" class="delete">Delete</a>
         </li>
         {% endfor %}
     {% else %}
