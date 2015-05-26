@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^/add/$', views.AddView, name='add'),
     url(r'^(?P<user_id>\d+)$', views.DetailView, name='detail'),
     url(r'^(?P<user_id>\d+)/edit/$', views.EditView, name='edit'),
-    url(r'^(?P<user_id>\d+)/delete/$', views.EditView, name='delete'),
+    url(r'^(?P<user_id>\d+)/delete/$', views.DeleteView, name='delete'),
 ]

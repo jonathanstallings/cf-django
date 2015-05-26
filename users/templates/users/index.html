@@ -4,10 +4,16 @@
 <section id="current-users">
     <h3>Current Users</h3>
     <ul>
+    {% if user_list %}
+        {% for user in user_list %}
         <li>
-            <a href="#">Sample User</a>
-            <button class="delete">Delete</button>
+            <a href="{% url 'users:detail' user.id %}">{{ user.name_abbrev }}</a>
+            <a href="{% url 'users:delete' user.id %}" class="button">Delete</a>
         </li>
+        {% endfor %}
+    {% else %}
+        <li>No Users Found!</li>
+    {% endif %}
     </ul>
 </section>
 {% endblock %}

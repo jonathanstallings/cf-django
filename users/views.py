@@ -43,3 +43,9 @@ def EditView(request, user_id):
 
     u.save()
     return HttpResponseRedirect(reverse('users:index'))
+
+
+def DeleteView(request, user_id):
+    u = get_object_or_404(User, pk=user_id)
+    u.delete()
+    return HttpResponseRedirect(reverse('users:index'))
